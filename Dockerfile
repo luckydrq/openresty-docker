@@ -81,7 +81,7 @@ ENV LUA_CPATH="/usr/local/openresty/site/lualib/?.so;/usr/local/openresty/lualib
 COPY nginx.conf "${NGINX_CONF_PATH}"
 COPY nginx.default.conf "${NGINX_DEFAULT_CONF_PATH}"
 
-# CMD ["/usr/bin/openresty", "-g", "daemon off;"]
+CMD ["/usr/bin/openresty", "-g", "daemon off;"]
 
 # Use SIGQUIT instead of default SIGTERM to cleanly drain requests
 # See https://github.com/openresty/docker-openresty/blob/master/README.md#tips--pitfalls
